@@ -40,15 +40,22 @@
     align-items: center;
 }
 
-.brand a:last-child{
-    margin-left: 20px;
-    color: #f8f8f8;
-    font-size: 18px;
+.brand a{
+    margin-right: 25px;
 }
 
 a{
     text-decoration: none;
-    color: #717280;
+    color: #5e5f6b;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #f8f8f8;
+}
+
+.active{
+    color: #f8f8f8;
 }
 
 .elements{
@@ -412,6 +419,7 @@ tr:nth-child(even) {
 
 .title h1{
     font-size: 22px;
+    color: #445764;
 }
 
 .other-details{
