@@ -28,12 +28,12 @@
               <p>Ustacky Student Portal registration, join us today<br> for your online courses</p>
               <a href="register.php"><button type="button">Get Started</button></a>
            </div>
-           <div>
-              image here
+           <div class="home-img">
+              <img src="images/home_img.jpg" alt="image">
            </div>
         </div>
         <div class="footer">
-            <p>All rights reserved @Ustacky <?php echo date("Y"); ?></p>
+          <p>All rights reserved @Ustacky <?php echo date("Y"); ?></p>
         </div>
     </div>
 </body>
