@@ -46,7 +46,7 @@
 
 a{
     text-decoration: none;
-    color: #5e5f6b;
+    color: #9a9eae;
     font-weight: bold;
 }
 
@@ -108,7 +108,7 @@ a:hover{
 
 .footer p{
     text-align: center;
-    color: #717280;
+    color: #9a9eae;
 }
 
 .form-box{
@@ -266,6 +266,7 @@ textarea{
 .select-status{
     width: 250px;
     margin-left: 50px;
+    
 }
 
 .select-status select{
@@ -436,9 +437,24 @@ tr:nth-child(even) {
 }
 
 .user-data p{
-    margin-right: 75px;
+    margin-right: 70px;
+}
+
+.different{
+    margin-right: 0;
+    
 }
 
 .status-box{
     display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.status-box select{
+    padding: 5px;
+    font-size: 18px;
+    margin-left: 5px;
+    color: #7a7676;
+    font-weight: bold;
 }

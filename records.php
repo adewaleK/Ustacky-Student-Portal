@@ -10,20 +10,7 @@
 </head>
 <body>
     <div class="container">
-      <div class="nav-box">
-        <div class="nav">
-          <div class="brand">
-            <a href="index.php"><h2>USTACKY</h2></a>
-            <a href="index.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'index.php')?'active':''; ?>">Home</a>
-            <a href="register.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'register.php')?'active':''; ?>">Portal</a>
-            <a href="records.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'records.php')?'active':''; ?>">Dashboard</a>
-            <a href="records.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'records.php')?'active':''; ?>">Student Information</a>
-          </div>
-          <div class="elements">
-            <a href="index.php">Get Started</a>
-          </div>
-        </div>
-      </div>
+      <?php include 'includes/navbar.php'; ?>;
       <div class="info">
          <p><span>Info!</span> All students records table</p>
       </div>
@@ -44,9 +31,8 @@
             <div class="select-gender">
               <select name="gender" id="gender" class="">
                 <option value="volvo">Select-Gender</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
               </select>
             </div>
             <div class="score-search">
@@ -101,9 +87,7 @@
         </table>
         </div>
       </div>
-      <div class="footer">
-        <p>All rights reserved @Ustacky <?php echo date("Y"); ?></p>
-      </div>
+      <?php include 'includes/footer.php'; ?>
     </div>
 </body>
 </html>

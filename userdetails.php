@@ -9,20 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="nav-box">
-      <div class="nav">
-        <div class="brand">
-          <a href="index.php"><h2>USTACKY</h2></a>
-          <a href="index.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'index.php')?'active':''; ?>">Home</a>
-          <a href="register.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'register.php')?'active':''; ?>">Portal</a>
-          <a href="records.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'records.php')?'active':''; ?>">Dashboard</a>
-          <a href="records.php" class="<?= (basename($_SERVER['PHP_SELF']) == 'records.php')?'active':''; ?>">Student Information</a>
-        </div>
-        <div class="elements">
-          <a href="index.php">Get Started</a>
-        </div>
-      </div>
-    </div>
+  <?php include 'includes/navbar.php'; ?>;
     <div class="details-box">
       <div class="personal-details">
         <div class="user-box">
@@ -59,9 +46,9 @@
         <div class="user-data">
           <p>Next Of Kin: Abigael Adebisi</p>
           <p>Jamb Score: 180</p>
-          <p>Status: undecided</p>
-          <div class=status-box>
-            <p>Change Status:
+          <p>Status: undecided
+          <div class="status-box">
+            <p class="different">Change Status:
             <select name="status">
               <option value="volvo">Change-Status</option>
               <option value="saab">Saab</option>
@@ -73,9 +60,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">
-      <p>All rights reserved @Ustacky <?php echo date("Y"); ?></p>
-    </div>
+    <?php include 'includes/footer.php'; ?>
   </div>
 </body>
 </html>
