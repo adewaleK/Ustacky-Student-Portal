@@ -90,7 +90,6 @@ require "connection.php";
       }
 
       $sql ="SELECT 1 FROM locals LIMIT 1";
-
       if($result = mysqli_query($conn, $sql)){
         if($result && mysqli_num_rows($result) == 0){
           // foreach($final_lg as $local){

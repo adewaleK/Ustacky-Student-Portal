@@ -13,7 +13,7 @@
     <div class="details-box">
       <div class="personal-details">
         <div class="user-box">
-          <img src="images/profile.png" alt="detail">
+          <img src="assets/images/profile.png" alt="detail">
           <h1>John Doe</h1>
           <a href=""><button type="button">undecided</button></a>
         </div>
@@ -51,9 +51,8 @@
             <p class="different">Change Status:
             <select name="status">
               <option value="volvo">Change-Status</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
+              <option value="saab">Admitted</option>
+              <option value="saab">Undecided</option>
             </select>
             </p>
           </div>

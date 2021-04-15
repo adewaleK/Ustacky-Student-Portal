@@ -10,6 +10,7 @@
 <body>
     <div class="container1">
     <?php include 'includes/navbar.php'; ?>;
+        <form action="config/processForm.php" method="post" enctype="multipart/form-data">
         <div class="form-box">
             <h1>Student Portal Form</h1>
             <p class="instruction">Please fill in all required information</p>
@@ -19,45 +20,45 @@
             <div class="input">
                 <div class="group">
                     <label for="image">Upload Image:</label>
-                    <input type="file" class="first" name="image">
+                    <input type="file" class="first" name="image" id="image">
                 </div>
             </div>
             <div class="other-input">
                 <div class="group">
                     <label for="fname">FirstName</label>
-                    <input type="text" class="first" placeholder="Enter FirstName" name="fname">
+                    <input type="text" class="first" placeholder="Enter FirstName" name="fname" id="fname">
                 </div>
                 <div class="group">
                     <label for="mname">MiddleName</label>
-                    <input type="text" placeholder="Enter MiddleName" name="mname">
+                    <input type="text" placeholder="Enter MiddleName" name="mname" id="mname">
                 </div>
             </div>
             <div class="other-input">
                 <div class="group">
                     <label for="lname">LastName</label>
-                    <input type="text" class="first" placeholder="Enter LastName" name="lname">
+                    <input type="text" class="first" placeholder="Enter LastName" name="lname" id="lname">
                 </div>
                 <div class="group">
                     <label for="email">Email</label>
-                    <input type="text" placeholder="Enter Email Address" name="email">
+                    <input type="text" placeholder="Enter Email Address" name="email" id="email">
                 </div>
             </div>
             <div class="other-input1">
                 <div class="group">
                     <label for="dob">Date Of Birth</label>
-                    <input type="date" class="first" name="dob">
+                    <input type="date" class="first" name="dob" id="dob">
                 </div>
                 <div class="radio-group">
                     <label for="male">Male</label>
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="gender" name="gender" value="male">
                     <label for="female">Female</label>
-                    <input type="radio" id="female" name="gender" value="female">
+                    <input type="radio" id="gender" name="gender" value="female">
                 </div>
             </div>
             <div class="other-input">
                 <div class="group">
                     <label for="phone">Phone Number</label>
-                    <input type="text" class="first" placeholder="Enter PhoneNumber" name="phone">
+                    <input type="number" class="first" placeholder="Enter PhoneNumber" name="phone">
                 </div>
                 <div class="group">
                     <label for="address">Address</label>
@@ -68,27 +69,29 @@
             <div class="other-input">
                 <div class="group">
                     <label for="state">State 0f Origin:</label>
-                    <select name="state" id="cars" class="first">
-                        <option value="volvo">Select-State</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                    <select name="state" id="state" class="first">
+                        <option disabled selected value="">Select-State</option>
+                        <?php
+                          include 'config/connection.php'; 
+                          $sql ="SELECT * FROM states";
+                          $result = mysqli_query($conn, $sql);
+                          while($row = mysqli_fetch_array($result)){
+                        ?>
+                        <option value="<?= $row['id']; ?>"><?= $row['name']; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="group">
                     <label for="lg">Local Government:</label>
-                    <select name="lg" id="lg">
-                        <option value="volvo">Select-Local-Government</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                    <select name="local" id="local" > 
+                        <option disabled selected value="">Select-Local-Government</option>   
                     </select>
                 </div>
             </div>
             <div class="input">
                 <div class="group">
                     <label for="next">Next Of Kin</label>
-                    <input type="text" class="first" name="next" placeholder="Enter The Name Of Next Of Kin">
+                    <input type="text" class="first" name="next" placeholder="Enter The Name Of Next Of Kin" id="next">
                 </div>
             </div>
             <div class="heading">
@@ -97,14 +100,17 @@
             <div class="input">
                 <div class="group">
                     <label for="score">Jamb Score</label>
-                    <input type="text" class="first" name="score" placeholder="Enter Jamb Score">
+                    <input type="text" class="first" name="score" id="score" placeholder="Enter Jamb Score">
                 </div>
             </div>
             <div class="submit">
-               <input type="submit" value="Submit" name="submit">
+               <input type="submit" value="Submit" name="submit" onclick="registerStudentAjax()">;
             </div>
         </div>
+        </form>
         <?php include 'includes/footer.php'; ?>
     </div>
+    <script src="assets/js/jquery.main.js"></script>
+    <script src="assets/js/main.js"></script> 
 </body>
 </html>

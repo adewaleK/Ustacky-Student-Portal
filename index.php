@@ -19,10 +19,11 @@
               <a href="register.php"><button type="button">Get Started</button></a>
            </div>
            <div class="home-img">
-              <img src="images/home_img.jpg" alt="image">
+              <img src="assets/images/home_img.jpg" alt="image">
            </div>
         </div>
     <?php include 'includes/footer.php'; ?>   
     </div>
+
 </body>
 </html>

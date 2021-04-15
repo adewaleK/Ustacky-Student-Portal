@@ -52,38 +52,26 @@
                 <th>Admission Status</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Olashile Abdulquddus</td>
-                <td>Male</td>
-                <td>280</td>
-                <td>Admitted</td>
-                <td><a href="userdetails.php"><i class="fa fa-eye"></i></a></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Olashile Abdulquddus</td>
-                <td>Male</td>
-                <td>280</td>
-                <td>Admitted</td>
-                <td><a href="userdetails.php"><i class="fa fa-eye"></i></a></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Olashile Abdulquddus</td>
-                <td>Male</td>
-                <td>280</td>
-                <td>Admitted</td>
-                <td><a href="userdetails.php"><i class="fa fa-eye"></i></a></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Olashile Abdulquddus</td>
-                <td>Male</td>
-                <td>280</td>
-                <td>Admitted</td>
-                <td><a href="userdetails.php"><i class="fa fa-eye"></i></a></td>
-            </tr>
+            <!-- <tr>     -->
+                <?php   
+                  include 'config/connection.php'; 
+
+                  $sql = "SELECT * FROM students";
+                  $result = mysqli_query($conn, $sql);
+
+                  //if(mysqli_query($conn, $sql)){
+                    while($row = mysqli_fetch_array($result)){
+                ?>
+                    <tr>
+                    <td><?= $row['id']; ?></td>
+                    <td><?= $row['firstname']; ?> <?= $row['middlename']; ?> <?= $row['lastname']; ?></td>
+                    <td><?= $row['gender']; ?></td>          
+                    <td><?= $row['jamb_score']; ?></td>
+                    <td><?= $row['admin_status']; ?></td>
+                    <td><a href="userdetails.php"><i class="fa fa-eye"></i></a></td>  
+                    </tr>
+               <?php } ?>
+            <!-- </tr> -->
         </table>
         </div>
       </div>
