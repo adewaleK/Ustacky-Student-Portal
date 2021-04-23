@@ -57,10 +57,15 @@ a:hover{
 .elements{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .elements a{
     font-size: 18px;
+}
+
+.elements i{
+    display: none;
 }
 
 .content{
@@ -493,11 +498,6 @@ tr:nth-child(even) {
     display: flex;
 }
 
-.status-box p{
-    /* text-align: right;
-    margin-left: 25px; */
-}
-
 .status-box div{
     margin-left: -60px;
     margin-left: -16%;
@@ -522,7 +522,9 @@ tr:nth-child(even) {
    }
 
    .brand{
-       flex-direction: column;
+       flex-direction: column;  
+       align-items: center;
+       justify-content: center;
    }
 
    .brand a{
@@ -531,8 +533,11 @@ tr:nth-child(even) {
    }
 
    .nav{
-       flex-direction: column;
-       align-items: center;
+       /* flex-direction: column; */
+       align-items: baseline;
+       justify-content: space-between;
+       font-size: 30px;
+       color: #9a9eae;
    }
 
    .nav-box{
@@ -570,9 +575,35 @@ tr:nth-child(even) {
     width: 200px; 
   }
 
+  .brand a{
+      display: none;
+  }
+
+  .elements{
+      /* justify-content: right; */
+      
+      margin-left: auto;
+  }
+
+  .elements i{
+      display: block;  
+  }
+
+  #brand-id{
+      display: block;
+  }
+
+  .elements a{
+      display: none;
+  }
+
+  .elements p{
+      display: none;
+  }
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
    .content{
        flex-direction: column;
    }

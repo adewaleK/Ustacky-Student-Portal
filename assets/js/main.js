@@ -30,5 +30,21 @@ $(document).ready(function(){
       })  
     });
 
+    //Control Mobile Navbar Display
+
+    $("#menu").click(function(){
+      $(".brand a").css("display", "block");
+      $(".elements i").css("display", "none");
+      $(".elements p").css("display", "block"); 
+    })
+
+    $("#close").click(function(){
+      $(".brand a").css("display", "none");
+      $("#brand-id").css("display", "block");
+      $(".elements i").css("display", "block");
+      $(".elements p").css("display", "none"); 
+    })
+
+
 })
 
