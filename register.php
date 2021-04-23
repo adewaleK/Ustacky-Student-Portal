@@ -55,10 +55,13 @@
                     <input type="date" class="first" name="dob" id="dob">
                 </div>
                 <div class="radio-group">
-                    <label for="male">Male</label>
-                    <input type="radio" id="gender" name="gender" value="male">
-                    <label for="female">Female</label>
-                    <input type="radio" id="gender" name="gender" value="female">
+                   
+                     <p>Gender</p>
+                       <label for="male">Male</label>
+                       <input type="radio" id="gender" name="gender" value="male">
+                       <label for="female">Female</label>
+                       <input type="radio" id="gender" name="gender" value="female">
+                   
                 </div>
             </div>
             <div class="other-input">
