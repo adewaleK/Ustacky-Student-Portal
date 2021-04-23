@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Document | Profile</title>
 </head>
 <body>
   <div class="container">
@@ -72,9 +73,13 @@
           <h1>Academics Related Information</h1>
         </div>
         <div class="user-data">
-          <p>Next Of Kin: <?= $next; ?></p>
-          <p>Jamb Score: <?= $score; ?></p>
-          <span>Status:</span> <p id="curr-status"><?= $status; ?></p>
+          <div class="next-score">
+            <p>Next Of Kin: <?= $next; ?></p>
+            <p>Jamb Score: <?= $score; ?></p>
+          </div>
+          <div class="status-value">
+            <span>Status:</span> <p id="curr-status"><?= $status; ?></p>
+          </div>
           <div class="status-box">
             <p class="different">Change Status:</p>
             <div>
@@ -86,7 +91,6 @@
               </select>   
             </form>
             </div>
-            <!-- </p> -->
           </div>
         </div>
       </div>

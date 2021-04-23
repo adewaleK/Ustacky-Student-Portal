@@ -38,6 +38,8 @@ $(document).ready(function(){
       $(".elements p").css("display", "block"); 
     })
 
+    //Ajaxt to Close Menu Bar On Mobile
+
     $("#close").click(function(){
       $(".brand a").css("display", "none");
       $("#brand-id").css("display", "block");

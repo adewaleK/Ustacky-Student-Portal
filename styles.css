@@ -145,13 +145,6 @@ a:hover{
     margin-top: 12px;
 }
 
-/* .message{
-    margin: 0 auto;
-    width: 50%;
-    border: 1px solid red;
-    margin-top: 1%;
-} */
-
 .msg-bg{
     margin: 0 auto;
     width: 50%;
@@ -493,8 +486,6 @@ tr:nth-child(even) {
     margin-right:10px
 }
 
-
-
 .status-box{
     display: flex;
 }
@@ -503,7 +494,7 @@ tr:nth-child(even) {
     margin-left: -60px;
     margin-left: -16%;
     margin-top: -1.5%;
-}
+} 
 
 .status-box select{
     padding: 5px;
@@ -538,7 +529,6 @@ tr:nth-child(even) {
    }
 
    .nav{
-       /* flex-direction: column; */
        align-items: baseline;
        justify-content: space-between;
        font-size: 30px;
@@ -641,158 +631,224 @@ tr:nth-child(even) {
 
 }
 
-.name-search input{  
-    width: 90%;
-    margin-bottom: 3%;
-}
-
-.select-status select{
-    margin-left: -20%;
-    width: 100%;
-    margin-bottom: 3%;
-}
-
-.select-gender select{
-    margin-left: -25%;
-    width: 100%;
-    margin-bottom: 3%;
-}
-
-    .score-search input{
-        margin-left: -29%;
-        width: 100%;
-        margin-bottom: 8%;
-
+    .name-search input{  
+      width: 90%;
+      margin-bottom: 3%;
     }
 
-    .students-records table{
-        width: 92vw;
-        margin-left: 0;
-        margin-right: 15px;
+    .select-status select{
+      margin-left: -20%;
+      width: 100%;
+      margin-bottom: 3%;
     }
+
+    .select-gender select{
+      margin-left: -25%;
+      width: 100%;
+      margin-bottom: 3%;
+    }
+
+  .score-search input{
+    margin-left: -29%;
+    width: 100%;
+    margin-bottom: 8%;
+  }
+
+  .students-records table{
+    width: 92vw;
+    margin-left: 0;
+    margin-right: 15px;
+  }
     
-    th{
-        padding: 0;
-        font-size: 13px;
-    }
+  th{
+    padding: 0;
+    font-size: 13px;
+  }
 
-    td{
-        font-size: 12px;
-    }
+  td{
+    font-size: 12px;
+  }
+
+  .personal-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-box{
+    margin: 0;
+    width: 60vw;
+  }
+
+  .details{
+    width: 85vw;
+    margin-top: 4%;
+  }
+
+  .details li{
+    font-size: 15px;
+  }
+
+  .title h1{
+    font-size: 18px;
+  }
+
+  .user-data{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-data p{
+    font-size: 15px;
+    margin-right: 10px;
+  }
+
+  .status-value{
+    display: flex;
+    width: 100%;
+    margin-top: 1%;
+    padding-bottom: 10px;
+  }
+
+ .next-score{
+    display: flex;
+  }
+
+  .status-box{
+     display: flex;
+  }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
    .content{
-       flex-direction: column;
+      flex-direction: column;
    }
 
    .home-img{
-    margin: 0 auto;
-    margin-top: 30px;
+      margin: 0 auto;
+      margin-top: 30px;
    }
 
    .home-img img{
-    width: 400px; 
+      width: 400px; 
    }
 
    .about h1{
-    text-align: center;
+      text-align: center;
    }
 
   .about p{
-    font-size: 27px;
+      font-size: 27px;
    }
 
    .other-input{
-    flex-direction: column;
-}
+      flex-direction: column;
+   }
 
-.other-input1{
-    flex-direction: column;
-    align-items: flex-start;
-}
+   .other-input1{
+      flex-direction: column;
+      align-items: flex-start;
+   }
 
-.other-input1 group{
-    width: 100vw;
-    background-color: red;
-}
+   .other-input1 group{
+      width: 100vw;
+   }
 
-.group input{
-    width: 98%;
-}
+   .group input{
+      width: 98%;
+   }
 
-.group select{
-    width: 98%;
-}
+  .group select{
+     width: 98%;
+   }
 
-.form-box{
-    padding: 5%;
-}
+   .form-box{
+     padding: 5%;
+   }
 
-.radio-group{
-  padding-top: 15px;
-  width: 100%;
-}
+  .radio-group{
+    padding-top: 15px;
+    width: 100%;
+  }
 
-.brand a:last-child{
+  .brand a:last-child{
     display: none;
-}
+   }
 
-.search-fields form{
+  .search-fields form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+   }
 
-}
-
-.name-search input{  
-    width: 90%;
+  .name-search input{  
+    width: 80%;
     margin-bottom: 3%;  
-}
+  }
 
-.search-btn{
+  .search-btn{
     margin: 10px auto;
     width: 200px;
-}
+  }
 
-.search-btn input{
+  .search-btn input{
     font-size: 20px;
     text-align: center;
-}
+  }
 
-
-
-.select-status select{
+ .select-status select{
     margin-left: -20%;
-    width: 100%;
+    width: 80%;
     margin-bottom: 3%;
-}
+  }
 
-.select-gender select{
+ .select-gender select{
     margin-left: -25%;
     width: 100%;
     margin-bottom: 3%;
+  }
+
+ .score-search input{
+    margin-left: -55%;
+    width: 100%;
+    margin-bottom: 8%;
+  }
+
+ .name-status{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+ }
+
+.gender-score{
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+ } 
+
+.personal-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-    .score-search input{
-        margin-left: -29%;
-        width: 100%;
-        margin-bottom: 8%;
+.user-box{
+  margin: 0;
+  width: 30vw;
+}
 
-    }
+.details{
+  width: 85vw;
+  margin-top: 4%;
+} 
 
-    .name-status{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-    }
+.next-score{
+  display: flex;
+} 
 
-    .gender-score{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
+.status-box{
+  display: flex;
+}
 
 }
