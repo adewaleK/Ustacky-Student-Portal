@@ -16,7 +16,6 @@
     if (!mysqli_select_db($conn, $dbname)){
         $createDatabase = "CREATE DATABASE IF NOT EXISTS $dbname";
         mysqli_query($conn, $createDatabase);
-        //echo "DB created";
         mysqli_close($conn);
     }
     

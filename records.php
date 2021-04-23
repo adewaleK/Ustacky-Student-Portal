@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,7 @@
 <body>
     <div class="container">
       <?php include 'includes/navbar.php'; ?>;
+
       <div class="info">
          <p><span>Info!</span> All students records table</p>
       </div>
@@ -20,19 +23,18 @@
              <input type="text" placeholder="Search Records By Name Only" name="name_search">
             </div>
             <div class="select-status">
-              <select name="admin-status" id="admin-status" class="">
-                <option value="volvo">Select-Admission-Status</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+              <select name="admin_status" id="admin_status" >
+                <option value="" selected disabled>Select-Admission-Status</option>
+                <option value="Undecided">Undecided</option>
+                <option value="Admitted">Admitted</option>
               </select>
             </div>
           
             <div class="select-gender">
-              <select name="gender" id="gender" class="">
-                <option value="volvo">Select-Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+              <select name="gender" id="gender" >
+                <option value="" selected disabled>Select-Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
               </select>
             </div>
             <div class="score-search">
@@ -43,6 +45,11 @@
            </div>
          </form>
          <div class="students-records">
+         <div  class="success">
+             <?php  if(isset($_GET['correct'])){ ?> 
+               <p><?= $_GET['correct'] ?></p>
+             <?php  } ?>
+          </div>
          <table>
             <tr>
                 <th>S/n</th>
@@ -52,28 +59,74 @@
                 <th>Admission Status</th>
                 <th>Action</th>
             </tr>
-            <!-- <tr>     -->
                 <?php   
                   include 'config/connection.php'; 
 
-                  $sql = "SELECT * FROM students";
-                  $result = mysqli_query($conn, $sql);
+                  if(isset($_POST['search'])){
+                      
+                    //$admin_status = $_POST['admin_status'];
+                    //$gender = $_POST['gender'];
+                    $gender ='';$firstname='';
+                    $jamb_score =''; $admin_status='';
+                    $middlename='';$lastname='';
+                    $id='';
+                    
+                      
+                    
+                      if(isset($_POST['name_search']) || isset($_POST['jamb_score']) ||
+                      isset($_POST['admin_status']) || isset($_POST['gender'])){
 
-                  //if(mysqli_query($conn, $sql)){
-                    while($row = mysqli_fetch_array($result)){
-                ?>
-                    <tr>
-                    <td><?= $row['id']; ?></td>
-                    <td><?= $row['firstname']; ?> <?= $row['middlename']; ?> <?= $row['lastname']; ?></td>
-                    <td><?= $row['gender']; ?></td>          
-                    <td><?= $row['jamb_score']; ?></td>
-                    <td><?= $row['admin_status']; ?></td>
-                    <td><a href="userdetails.php"><i class="fa fa-eye"></i></a></td>  
-                    </tr>
-               <?php } ?>
-            <!-- </tr> -->
-        </table>
-        </div>
+                        $name = $_POST['name_search'];
+                        $jamb_score = $_POST['jamb_score'];
+                        
+                        if(isset($_POST['admin_status'])){
+                          $admin_status = $_POST['admin_status'];           
+                        }
+
+                        if(isset($_POST['gender'])){
+                          $gender = $_POST['gender'];
+                        }
+                        
+
+                      //   $sql = "SELECT * FROM students WHERE firstname LIKE '%".$name."%' 
+                      //  OR lastname LIKE '%".$name."%' OR middlename LIKE '%".$name."%' 
+                      //  OR jamb_score LIKE '%".$jamb_score."%' OR admin_status LIKE '%".$admin_status."%' 
+                      //  OR gender LIKE '%".$gender."%'";
+
+                        // $sql = "SELECT * FROM students WHERE middlename LIKE '%".$name."%' 
+                        // OR jamb_score LIKE '%".$jamb_score."%'";
+
+                      $sql = "SELECT id,firstname,lastname,middlename,jamb_score, admin_status, gender
+                      FROM students
+                      WHERE (id = '$id')
+                        OR (firstname = '$name')
+                        OR  (lastname = '$name')
+                        OR  (middlename = '$name')
+                        OR (jamb_score = '$jamb_score')
+                        OR (admin_status = '$admin_status')
+                        OR (gender = '$gender')";
+
+                      }
+                    }else{
+                      $sql = "SELECT * FROM students";
+                    }
+
+                  $result = mysqli_query($conn, $sql);
+                  while($row = mysqli_fetch_array($result)){
+                ?>  
+                    <?php if(mysqli_num_rows($result) > 0){ ?>
+                      <tr>
+                      <td><?= $row['id']; ?></td>
+                      <td><?= $row['firstname']; ?> <?= $row['middlename']; ?> <?= $row['lastname']; ?></td>
+                      <td><?= $row['gender']; ?></td>          
+                      <td><?= $row['jamb_score']; ?></td>
+                      <td><?= $row['admin_status']; ?></td>
+                      <td><a href="userdetails.php?user_id=<?= $row['id']; ?>"><i class="fa fa-eye"></i></a></td>  
+                      </tr>
+                    <?php } ?>
+               <?php  } ?>            
+            </table>
+          </div>
       </div>
       <?php include 'includes/footer.php'; ?>
     </div>

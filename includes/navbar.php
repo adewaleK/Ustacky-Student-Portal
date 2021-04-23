@@ -11,4 +11,4 @@
             <a href="index.php">Get Started</a>
           </div>
         </div>
-      </div>
+</div>

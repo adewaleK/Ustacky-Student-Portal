@@ -10,12 +10,17 @@
 <body>
     <div class="container1">
     <?php include 'includes/navbar.php'; ?>;
-        <form action="config/processForm.php" method="post" enctype="multipart/form-data">
+        <form action="config/processForm.php" method="post" enctype="multipart/form-data" id="register-form">
         <div class="form-box">
             <h1>Student Portal Form</h1>
             <p class="instruction">Please fill in all required information</p>
             <div class="heading">
                 <h2>Personal information</h2>
+            </div>
+            <div class="failure">
+                <?php  if(isset($_GET['err_msg'])){ ?> 
+                  <p><?= $_GET['err_msg'] ?></p>
+                <?php  } ?> 
             </div>
             <div class="input">
                 <div class="group">
@@ -58,7 +63,7 @@
             <div class="other-input">
                 <div class="group">
                     <label for="phone">Phone Number</label>
-                    <input type="number" class="first" placeholder="Enter PhoneNumber" name="phone">
+                    <input type="number" class="first" placeholder="Enter PhoneNumber" name="phone" id="phone">
                 </div>
                 <div class="group">
                     <label for="address">Address</label>
@@ -104,7 +109,7 @@
                 </div>
             </div>
             <div class="submit">
-               <input type="submit" value="Submit" name="submit" onclick="registerStudentAjax()">;
+               <input type="submit" value="Submit" name="submit" id="submit-btn">;
             </div>
         </div>
         </form>

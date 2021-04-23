@@ -13,20 +13,48 @@
     <div class="details-box">
       <div class="personal-details">
         <div class="user-box">
-          <img src="assets/images/profile.png" alt="detail">
-          <h1>John Doe</h1>
-          <a href=""><button type="button">undecided</button></a>
+
+        <?php 
+            session_start();
+            include 'config/connection.php'; 
+            $id = $_GET['user_id'];
+            $_SESSION['ss_id'] = $id;
+              
+            $sql = "SELECT * FROM students WHERE id=$id";
+            $result = mysqli_query($conn, $sql);
+            $output = '';
+              while($row = mysqli_fetch_array($result)){
+                $image_path = $row['image_path'];
+                $fname = $row['firstname'];
+                $lname = $row['lastname'];
+                $email = $row['email'];
+                $gender = $row['gender'];
+                $phone = $row['phone_number'];
+                $dob = $row['date_of_birth'];
+                $address = $row['address'];
+                $state = $row['state_of_origin'];
+                $local = $row['local_govt'];
+                $next = $row['next_of_kin']; 
+                $score = $row['jamb_score'];
+                $status = $row['admin_status'];
+              }
+
+          ?>
+          <img src="<?= 'config/'.$image_path; ?>" alt="image" >
+
+          <h1><?= $fname; ?> <?= $lname; ?></h1>
+          <a href=""><div type="button" id="ppp"><?= $status; ?></div></a>
         </div>
         <div class="details">
           <div class="title">
             <h1>Personal Information</h1>
           </div>
           <ul>
-            <li>Email: john@amadi.com</li>
-            <li>Gender: male</li>
-            <li>Phone Number: 08130448837</li>
-            <li>Date Of Birth: 2021-03-18</li>
-            <li>Address: 5, Isheri-olofin Street, Lagos</li>
+            <li>Email: <?= $email; ?></li>
+            <li>Gender: <?= $gender; ?></li>
+            <li>Phone Number: <?= $phone; ?></li>
+            <li>Date Of Birth: <?= $dob; ?></li>
+            <li>Address: <?= $address; ?></li>
           </ul>
         </div>
       </div>
@@ -35,8 +63,8 @@
           <h1>Other Information</h1>
         </div>
         <div class="user-data">
-          <p>State Of Origin: Bayelsa State</p>
-          <p>Local Govt: Alimosho</p>
+          <p>State Of Origin: <?= $state; ?></p>
+          <p>Local Govt: <?= $local; ?></p>
         </div>
       </div>
       <div class="other-details">
@@ -44,22 +72,28 @@
           <h1>Academics Related Information</h1>
         </div>
         <div class="user-data">
-          <p>Next Of Kin: Abigael Adebisi</p>
-          <p>Jamb Score: 180</p>
-          <p>Status: undecided
+          <p>Next Of Kin: <?= $next; ?></p>
+          <p>Jamb Score: <?= $score; ?></p>
+          <span>Status:</span> <p id="curr-status"><?= $status; ?></p>
           <div class="status-box">
-            <p class="different">Change Status:
-            <select name="status">
-              <option value="volvo">Change-Status</option>
-              <option value="saab">Admitted</option>
-              <option value="saab">Undecided</option>
-            </select>
-            </p>
+            <p class="different">Change Status:</p>
+            <div>
+            <form action="change_status.php" method="get">
+              <select name="status" id="update-status">
+                <option value="Change-Status" disabled selected>Change-Status</option>
+                <option value="Admitted">Admitted</option>
+                <option value="Undecided">Undecided</option>
+              </select>   
+            </form>
+            </div>
+            <!-- </p> -->
           </div>
         </div>
       </div>
     </div>
     <?php include 'includes/footer.php'; ?>
   </div>
+  <script src="assets/js/jquery.main.js"></script>
+  <script src="assets/js/main.js"></script> 
 </body>
 </html>
