@@ -345,7 +345,7 @@ textarea{
 
 .search-btn input{
     width: 100%;
-    padding: 10px 70px 10px 10px;
+    padding: 10px 70px 10px 30px;
     border-radius: 5px;
     border: 1px solid gray;
     background-color: #3579b6;
@@ -504,351 +504,356 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
     .container{
        overflow-x: hidden;
     }
 
    .brand h2{
        font-size: 28px;
-   }
+    }
 
    .heading h2{
        font-size: 20px;
-   }
+    }
 
    .brand{
        flex-direction: column;  
        align-items: center;
        justify-content: center;
-   }
+    }
 
    .brand a{
        font-size: 18px;
        margin-bottom: 10px;
-   }
+    }
 
    .nav{
        align-items: baseline;
        justify-content: space-between;
        font-size: 30px;
        color: #9a9eae;
-   }
+    }
 
    .nav-box{
        height: auto;
        padding: 15px 0;
-   }
+    }
 
    .content{
        flex-direction: column;
        width: 90%;
        margin-top: 2px;
-   }
+       align-items: center;
+    }
 
    .about h1{
-    font-size: 38px;
-    text-align: center;
-  }
+       font-size: 38px;
+       text-align: center;
+    }
 
-  .about button{
-      margin-left: 35%;
-  }
+    .about button{
+       margin-left: 38%;
+    }
 
-  .about p{
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 12px; 
-  }
+    .about p{
+       font-size: 18px;
+       text-align: center;
+       margin-bottom: 12px; 
+    }
 
-  .home-img{
-    margin: 0 auto;
-    margin-top: 20px;
-  }
+    .home-img{
+       margin: 0 auto;
+       margin-top: 20px;
+    }
 
-  .home-img img{
-    width: 200px; 
-  }
+    .home-img img{
+       width: 200px; 
+       margin-left: -10%;
+    }
 
-  .brand a{
-      display: none;
-  }
+    .brand a{
+       display: none;
+    }
 
-  .elements{
-    margin-left: auto;
-  }
+    .elements{
+       margin-left: auto;
+    }
 
-  .elements i{
-      display: block;  
-  }
+    .elements i{
+       display: block;  
+    }
 
-  #brand-id{
-      display: block;
-  }
+    #brand-id{
+       display: block;
+    }
 
-  .elements a{
-      display: none;
-  }
+    .elements a{
+       display: none;
+    }
 
-  .elements p{
-      display: none;
-  }
+    .elements p{
+       display: none;
+    }
 
-  .other-input{
-    flex-direction: column;
-}
+    .other-input{
+       flex-direction: column;
+    }
 
-.other-input1{
-    flex-direction: column;
-    align-items: flex-start;
-}
+    .other-input1{
+       flex-direction: column;
+       align-items: flex-start;
+    }
 
-.other-input1 group{
-    width: 100vw;
-}
+    .other-input1 group{
+       width: 100vw;
+    }
 
-.group input{
-    width: 98%;
-}
+    .group input{
+       width: 98%;
+    }
 
-.group select{
-    width: 98%;
-}
+    .group select{
+       width: 98%;
+    }
 
-.form-box{
-    padding: 5%;
-}
+    .form-box{
+       padding: 5%;
+    }
 
-.radio-group{
-  padding-top: 15px;
-  width: 100%;
-}
+    .radio-group{
+       padding-top: 15px;
+       width: 100%;
+    }
 
-.search-fields form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-}
+    .search-fields form{
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+    }
 
     .name-search input{  
-      width: 90%;
-      margin-bottom: 3%;
+       width: 90%;
+       margin-bottom: 3%;
     }
 
     .select-status select{
-      margin-left: -20%;
-      width: 100%;
-      margin-bottom: 3%;
+       margin-left: -20%;
+       width: 100%;
+       margin-bottom: 3%;
     }
 
     .select-gender select{
-      margin-left: -25%;
-      width: 100%;
-      margin-bottom: 3%;
+       margin-left: -25%;
+       width: 100%;
+       margin-bottom: 3%;
     }
 
-  .score-search input{
-    margin-left: -29%;
-    width: 100%;
-    margin-bottom: 8%;
-  }
+    .score-search input{
+       margin-left: -29%;
+       width: 100%;
+       margin-bottom: 8%;
+    }
 
-  .students-records table{
-    width: 92vw;
-    margin-left: 0;
-    margin-right: 15px;
-  }
-    
-  th{
-    padding: 0;
-    font-size: 13px;
-  }
+    .students-records table{
+       width: 92vw;
+       margin-left: 0;
+       margin-right: 15px;
+    }
+        
+    th{
+       padding: 0;
+       font-size: 13px;
+    }
 
-  td{
-    font-size: 12px;
-  }
+    td{
+       font-size: 12px;
+    }
 
-  .personal-details{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .personal-details{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
 
-  .user-box{
-    margin: 0;
-    width: 60vw;
-  }
+    .user-box{
+       margin: 0;
+       width: 60vw;
+    }
 
-  .details{
-    width: 85vw;
-    margin-top: 4%;
-  }
+    .details{
+       width: 85vw;
+       margin-top: 4%;
+    }
 
-  .details li{
-    font-size: 15px;
-  }
+    .details li{
+       font-size: 15px;
+    }
 
-  .title h1{
-    font-size: 18px;
-  }
+    .title h1{
+       font-size: 18px;
+    }
 
-  .user-data{
-    display: flex;
-    flex-direction: column;
-  }
+    .user-data{
+       display: flex;
+       flex-direction: column;
+    }
 
-  .user-data p{
-    font-size: 15px;
-    margin-right: 10px;
-  }
+    .user-data p{
+       font-size: 15px;
+       margin-right: 10px;
+    }
 
-  .status-value{
-    display: flex;
-    width: 100%;
-    margin-top: 1%;
-    padding-bottom: 10px;
-  }
+    .status-value{
+       display: flex;
+       width: 100%;
+       margin-top: 1%;
+       padding-bottom: 10px;
+    }
 
- .next-score{
-    display: flex;
-  }
+    .next-score{
+       display: flex;
+    }
 
-  .status-box{
-     display: flex;
-  }
+    .status-box{
+       display: flex;
+    }
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
-   .content{
-      flex-direction: column;
-   }
+@media screen and (min-width: 481px) and (max-width: 1024px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
 
-   .home-img{
-      margin: 0 auto;
-      margin-top: 30px;
-   }
+    .home-img{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
 
-   .home-img img{
-      width: 400px; 
-   }
+    .home-img img{
+        width: 400px; 
+        margin-left: -12%;
+    }
 
-   .about h1{
-      text-align: center;
-   }
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .about p{
-      font-size: 27px;
-   }
+    .about button{
+        width: 200px;
+        padding: 5% 1%;
+        font-size: 20px;
+    }
 
-   .other-input{
-      flex-direction: column;
-   }
+    .about a{
+        font-size: 20px;
+    }
 
-   .other-input1{
-      flex-direction: column;
-      align-items: flex-start;
-   }
+    .about h1{
+        text-align: center;
+    }
 
-   .other-input1 group{
-      width: 100vw;
-   }
+    .about p{
+        font-size: 27px;
+        text-align: center;
+    }
 
-   .group input{
-      width: 98%;
-   }
+    .other-input{
+        flex-direction: column;
+    }
 
-  .group select{
-     width: 98%;
-   }
+    .other-input1{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-   .form-box{
-     padding: 5%;
-   }
+    .other-input1 group{
+        width: 100vw;
+    }
 
-  .radio-group{
-    padding-top: 15px;
-    width: 100%;
-  }
+    .group input{
+        width: 98%;
+    }
 
-  .brand a:last-child{
-    display: none;
-   }
+    .group select{
+        width: 98%;
+    }
 
-  .search-fields form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-   }
+    .form-box{
+        padding: 5%;
+    }
 
-  .name-search input{  
-    width: 80%;
-    margin-bottom: 3%;  
-  }
+    .radio-group{
+        padding-top: 15px;
+        width: 100%;
+    }
 
-  .search-btn{
-    margin: 10px auto;
-    width: 200px;
-  }
+    .brand a:last-child{
+        display: none;
+    }
 
-  .search-btn input{
-    font-size: 20px;
-    text-align: center;
-  }
+    .search-fields form{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 
- .select-status select{
-    margin-left: -20%;
-    width: 80%;
-    margin-bottom: 3%;
-  }
+    .name-search input{  
+        width: 80%;
+        margin-bottom: 3%;  
+    }
 
- .select-gender select{
-    margin-left: -25%;
-    width: 100%;
-    margin-bottom: 3%;
-  }
+    .search-btn{
+        margin: 10px auto;
+        width: 30vw;
+    }
 
- .score-search input{
-    margin-left: -55%;
-    width: 100%;
-    margin-bottom: 8%;
-  }
+    .search-btn input{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 50%;
+        padding-left: 25%;
+    }
 
- .name-status{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
- }
+    .select-status select{
+        margin-left: -20%;
+        width: 32vw;
+        margin-bottom: 3%;
+    }
 
-.gender-score{
-   display: flex;
-   justify-content: center;
-   margin: 0 auto;
- } 
+    .select-gender select{
+        margin-left: -20%;
+        width: 30vw;
+        margin-bottom: 3%;
+    }
 
-.personal-details{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .score-search input{
+        margin-left: -31%;
+        width: 20vw;
+        margin-bottom: 8%;
+    }
 
-.user-box{
-  margin: 0;
-  width: 30vw;
-}
+    .personal-details{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
 
-.details{
-  width: 85vw;
-  margin-top: 4%;
-} 
+    .user-box{
+       margin: 0;
+       width: 30vw;
+    }
 
-.next-score{
-  display: flex;
-} 
+    .details{
+       width: 85vw;
+       margin-top: 4%;
+    } 
 
-.status-box{
-  display: flex;
-}
+    .status-box{
+       display: flex;
+    }
 
 }

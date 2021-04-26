@@ -19,11 +19,9 @@
       </div>
       <div class="search-fields">
          <form action="" method="post">
-             <div class="name-status">
               <div class="name-search">
                 <input type="text" placeholder="Search Records By Name Only" name="name_search">
               </div>
-              
               <div class="select-status">
                 <select name="admin_status" id="admin_status" >
                   <option value="" selected disabled>Select-Admission-Status</option>
@@ -31,9 +29,6 @@
                   <option value="Admitted">Admitted</option>
                 </select>
               </div>
-            </div>
-          
-            <div class="gender-score">
               <div class="select-gender">
                 <select name="gender" id="gender" >
                   <option value="" selected disabled>Select-Gender</option>
@@ -44,7 +39,6 @@
 
               <div class="score-search">
                 <input type="text" placeholder="Enter Jamb Score" name="jamb_score">
-            </div>
             </div>
            <div class="search-btn">
              <input type="submit" value="Search" name="search">
@@ -67,13 +61,12 @@
             </tr>
                 <?php   
                   include 'config/connection.php'; 
-
+                  $x=1;
                   if(isset($_POST['search'])){
                     $gender ='';$firstname='';
                     $jamb_score =''; $admin_status='';
                     $middlename='';$lastname='';
-                    $id='';
-                    
+                    $id='';                   
                       if(isset($_POST['name_search']) || isset($_POST['jamb_score']) ||
                       isset($_POST['admin_status']) || isset($_POST['gender'])){
 
@@ -105,17 +98,22 @@
 
                   $result = mysqli_query($conn, $sql);
                   while($row = mysqli_fetch_array($result)){
+                    
                 ?>  
-                    <?php if(mysqli_num_rows($result) > 0){ ?>
+                    <?php if(mysqli_num_rows($result) > 0){ 
+          
+                      
+                      ?>
                       <tr>
-                      <td><?= $row['id']; ?></td>
+                      
+                      <td><?= $x; ?></td>
                       <td><?= $row['firstname']; ?> <?= $row['middlename']; ?> <?= $row['lastname']; ?></td>
                       <td><?= $row['gender']; ?></td>          
                       <td><?= $row['jamb_score']; ?></td>
                       <td><?= $row['admin_status']; ?></td>
                       <td><a href="userdetails.php?user_id=<?= $row['id']; ?>"><i class="fa fa-eye"></i></a></td>  
                       </tr>
-                    <?php } ?>
+                    <?php } $GLOBALS['x']++; ?>
                <?php  } ?>            
             </table>
           </div>
