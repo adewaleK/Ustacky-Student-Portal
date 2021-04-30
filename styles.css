@@ -504,6 +504,10 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
+.status-box form{
+    margin-top: 7%;
+}
+
 @media screen and (max-width: 480px) {
     .container{
        overflow-x: hidden;

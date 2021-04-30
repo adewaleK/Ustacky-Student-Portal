@@ -155,7 +155,7 @@ if( !isset($_FILES['image']) || !isset($_POST['fname']) || !isset($_POST['mname'
             gender,phone_number,address,state_of_origin,local_govt,next_of_kin,jamb_score) VALUES 
             ('$image_path','$fname','$mname','$lname','$email','$dob','$gender','$phone','$address','$state','$local','$next','$score')";
             if(mysqli_query($conn, $sql)){
-                header("location:../records.php?correct=Student details have been successfully submitted");
+                header("location:../register.php?correct=Student details have been successfully submitted");
             }
         }
 

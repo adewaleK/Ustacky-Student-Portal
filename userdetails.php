@@ -84,11 +84,8 @@
             <p class="different">Change Status:</p>
             <div>
             <form action="change_status.php" method="get">
-              <select name="status" id="update-status">
-                <option value="Change-Status" disabled selected>Change-Status</option>
-                <option value="Admitted">Admitted</option>
-                <option value="Undecided">Undecided</option>
-              </select>   
+              <input type="checkbox" id="update-status" name="status" value="Admitted">
+              <label for="update-status">Admitted</label>
             </form>
             </div>
           </div>

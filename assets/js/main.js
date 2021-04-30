@@ -18,17 +18,24 @@ $(document).ready(function(){
     //Ajax to Update Admission Status From Undecided to Admitted And Vice-Versa
 
     $("#update-status").change(function(){
-      var status = $(this).val();
-      $.ajax({
-        url: "config/change_status.php",
-        method: "GET",
-        data: {newStatus:status},
-        success: function(data){
-           $("#ppp").html(data);
-           $("#curr-status").html(data);
-        }
-      })  
-    });
+      if($(this).prop('checked')){
+        var result = $(this).val();
+        $.ajax({
+          url: "config/change_status.php",
+          method: "GET",
+          data: {result:result},
+          success: function(data){
+            $("#ppp").html(data);
+            $("#curr-status").html(data);           
+          }
+
+        })
+        
+      }
+
+    })
+
+    
 
     //Control Mobile Navbar Display
 

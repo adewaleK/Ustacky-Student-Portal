@@ -15,6 +15,11 @@
         <div class="form-box">
             <h1>Student Portal Form</h1>
             <p class="instruction">Please fill in all required information</p>
+            <div  class="success">
+            <?php  if(isset($_GET['correct'])){ ?> 
+              <p><?= $_GET['correct'] ?></p>
+            <?php  } ?>
+          </div>
             <div class="heading">
                 <h2>Personal information</h2>
             </div>

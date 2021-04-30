@@ -45,11 +45,7 @@
            </div>
          </form>
          <div class="students-records">
-          <div  class="success">
-            <?php  if(isset($_GET['correct'])){ ?> 
-              <p><?= $_GET['correct'] ?></p>
-            <?php  } ?>
-          </div>
+         
          <table>
             <tr>
                 <th>S/n</th>
