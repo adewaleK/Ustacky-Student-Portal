@@ -97,11 +97,8 @@
                     
                 ?>  
                     <?php if(mysqli_num_rows($result) > 0){ 
-          
-                      
                       ?>
-                      <tr>
-                      
+                      <tr>          
                       <td><?= $x; ?></td>
                       <td><?= $row['firstname']; ?> <?= $row['middlename']; ?> <?= $row['lastname']; ?></td>
                       <td><?= $row['gender']; ?></td>          
@@ -109,7 +106,7 @@
                       <td><?= $row['admin_status']; ?></td>
                       <td><a href="userdetails.php?user_id=<?= $row['id']; ?>"><i class="fa fa-eye"></i></a></td>  
                       </tr>
-                    <?php } $GLOBALS['x']++; ?>
+                    <?php  $GLOBALS['x']++; }?>
                <?php  } ?>            
             </table>
           </div>
