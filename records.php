@@ -20,7 +20,7 @@
       <div class="search-fields">
          <form action="" method="post">
               <div class="name-search">
-                <input type="text" placeholder="Search Records By Name Only" name="name_search">
+                <input type="text" placeholder="Search Records By Name Only" name="name_search" id="name_search">
               </div>
               <div class="select-status">
                 <select name="admin_status" id="admin_status" >
@@ -45,8 +45,7 @@
            </div>
          </form>
          <div class="students-records">
-         
-         <table>
+         <table id="students-data">
             <tr>
                 <th>S/n</th>
                 <th>Name</th>
@@ -58,45 +57,45 @@
                 <?php   
                   include 'config/connection.php'; 
                   $x=1;
-                  if(isset($_POST['search'])){
-                    $gender ='';$firstname='';
-                    $jamb_score =''; $admin_status='';
-                    $middlename='';$lastname='';
-                    $id='';                   
-                      if(isset($_POST['name_search']) || isset($_POST['jamb_score']) ||
-                      isset($_POST['admin_status']) || isset($_POST['gender'])){
+                  // if(isset($_POST['search'])){
+                  //   $gender ='';$firstname='';
+                  //   $jamb_score =''; $admin_status='';
+                  //   $middlename='';$lastname='';
+                  //   $id='';                   
+                  //     if(isset($_POST['name_search']) || isset($_POST['jamb_score']) ||
+                  //     isset($_POST['admin_status']) || isset($_POST['gender'])){
 
-                        if(isset($_POST['name_search'])){
-                          $name = $_POST['name_search'];
-                        }
+                  //       if(isset($_POST['name_search'])){
+                  //         $name = $_POST['name_search'];
+                  //       }
                         
-                        if(isset($_POST['jamb_score'])){
-                          $jamb_score = $_POST['jamb_score'];
-                        }
+                  //       if(isset($_POST['jamb_score'])){
+                  //         $jamb_score = $_POST['jamb_score'];
+                  //       }
                         
-                        if(isset($_POST['admin_status'])){
-                          $admin_status = $_POST['admin_status'];           
-                        }
+                  //       if(isset($_POST['admin_status'])){
+                  //         $admin_status = $_POST['admin_status'];           
+                  //       }
 
-                        if(isset($_POST['gender'])){
-                          $gender = $_POST['gender'];
-                        }
+                  //       if(isset($_POST['gender'])){
+                  //         $gender = $_POST['gender'];
+                  //       }
                         
-                      $sql = "SELECT id,firstname,lastname,middlename,jamb_score, admin_status, gender
-                      FROM students
-                      WHERE (id = '$id')
-                        OR (firstname = '$name')
-                        OR  (lastname = '$name')
-                        OR  (middlename = '$name')
-                        OR (jamb_score = '$jamb_score')
-                        OR (admin_status = '$admin_status')
-                        OR (gender = '$gender')
-                        ";
+                  //     $sql = "SELECT id,firstname,lastname,middlename,jamb_score, admin_status, gender
+                  //     FROM students
+                  //     WHERE (id = '$id')
+                  //       OR (firstname = '$name')
+                  //       OR  (lastname = '$name')
+                  //       OR  (middlename = '$name')
+                  //       OR (jamb_score = '$jamb_score')
+                  //       OR (admin_status = '$admin_status')
+                  //       OR (gender = '$gender')
+                  //       ";
 
-                      }
-                    }else{
+                  //     }
+                  //   }else{
                       $sql = "SELECT * FROM students";
-                    }
+                    //}
 
                   $result = mysqli_query($conn, $sql);
                   while($row = mysqli_fetch_array($result)){
@@ -113,7 +112,7 @@
                       <td><a href="userdetails.php?user_id=<?= $row['id']; ?>"><i class="fa fa-eye"></i></a></td>  
                       </tr>
                     <?php  $GLOBALS['x']++; }?>
-               <?php  } ?>            
+               <?php  } ?>             
             </table>
           </div>
       </div>

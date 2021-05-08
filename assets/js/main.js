@@ -53,6 +53,25 @@ $(document).ready(function(){
       $(".elements p").css("display", "none"); 
     })
 
+    //Ajax to Search Name
+
+    $("#name_search").keyup(function(){
+      var search = $(this).val();
+      $.ajax({
+        url: "config/search_name.php",
+        method: "POST",
+        data: {search:search},
+        success: function(data){
+          $("#students-data").html(data);
+        }
+
+      }) 
+
+  
+    })
+
+    
+
 
 })
 
