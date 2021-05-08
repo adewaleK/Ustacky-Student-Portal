@@ -66,8 +66,13 @@
                       if(isset($_POST['name_search']) || isset($_POST['jamb_score']) ||
                       isset($_POST['admin_status']) || isset($_POST['gender'])){
 
-                        $name = $_POST['name_search'];
-                        $jamb_score = $_POST['jamb_score'];
+                        if(isset($_POST['name_search'])){
+                          $name = $_POST['name_search'];
+                        }
+                        
+                        if(isset($_POST['jamb_score'])){
+                          $jamb_score = $_POST['jamb_score'];
+                        }
                         
                         if(isset($_POST['admin_status'])){
                           $admin_status = $_POST['admin_status'];           
@@ -85,7 +90,8 @@
                         OR  (middlename = '$name')
                         OR (jamb_score = '$jamb_score')
                         OR (admin_status = '$admin_status')
-                        OR (gender = '$gender')";
+                        OR (gender = '$gender')
+                        ";
 
                       }
                     }else{
