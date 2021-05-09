@@ -42,7 +42,6 @@
 
           ?>
           <img src="<?= 'config/'.$image_path; ?>" alt="image" >
-
           <h1><?= $fname; ?> <?= $lname; ?></h1>
           <a href=""><div type="button" id="ppp"><?= $status; ?></div></a>
         </div>
@@ -73,15 +72,19 @@
           <h1>Academics Related Information</h1>
         </div>
         <div class="user-data">
-          <!-- <div class="next-score"> -->
-            <p>Next Of Kin: <?= $next; ?></p>
-            <p>Jamb Score: <?= $score; ?></p>
-          <!-- </div> -->
-        
+          <p>Next Of Kin: <?= $next; ?></p>
+          <p>Jamb Score: <?= $score; ?></p>      
           <div class="status-box">
             <form action="change_status.php" method="get">
               <span>Status:</span>
-              <input type="checkbox" id="update-status" name="status" value="Admitted">
+              <?php 
+                if($status == 'Admitted'){
+                  $checked = 'checked';
+                }else{
+                  $checked = '';
+                }
+              ?>
+              <input type="checkbox" id="update-status" name="status" value="Admitted" <?= $checked ?> >
               <label for="update-status">Admitted</label>
             </form>
           </div>
