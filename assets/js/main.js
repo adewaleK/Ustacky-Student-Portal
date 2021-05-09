@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
     //Ajax to Load LGAs FROM STATES
-
     $("#state").change(function(){
       var state_id = $(this).val();
       $.ajax({
@@ -16,7 +15,6 @@ $(document).ready(function(){
     });
     
     //Ajax to Update Admission Status From Undecided to Admitted And Vice-Versa
-
     $("#update-status").change(function(){
       var result;
       if($(this).prop('checked') == true){
@@ -37,7 +35,6 @@ $(document).ready(function(){
     })
 
     //Control Mobile Navbar Display
-
     $("#menu").click(function(){
       $(".brand a").css("display", "block");
       $(".elements i").css("display", "none");
@@ -45,7 +42,6 @@ $(document).ready(function(){
     })
 
     //Ajaxt to Close Menu Bar On Mobile
-
     $("#close").click(function(){
       $(".brand a").css("display", "none");
       $("#brand-id").css("display", "block");
@@ -53,8 +49,7 @@ $(document).ready(function(){
       $(".elements p").css("display", "none"); 
     })
 
-    //Ajax to Search Name
-
+    //Ajax to Search By Name
     $("#name_search").keyup(function(){
       var search = $(this).val();
       $.ajax({
@@ -66,9 +61,36 @@ $(document).ready(function(){
         }
 
       }) 
-
-  
     })
+
+    //Ajax to Search By Admission status
+    $("#admin_status").change(function(){
+      var status = $(this).val();
+      $.ajax({
+        url: "config/search_status.php",
+        method: "POST",
+        data: {status:status},
+        success: function(data){
+          $("#students-data").html(data);
+        }
+      }) 
+    })
+
+    //Ajax to Search By Gender And Jamb score
+    $("#search").click(function(e){
+      e.preventDefault();
+      var gender = $("#gender").val();
+      var score = $("#jamb_score").val();
+      $.ajax({
+        url: "config/gender_score_search.php",
+        method: "POST",
+        data: {score,gender},
+        success: function(data){
+          $("#students-data").html(data);
+        }
+      }) 
+    })
+
 
     
 

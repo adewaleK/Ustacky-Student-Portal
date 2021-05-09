@@ -54,7 +54,7 @@
             <li>Email: <?= $email; ?></li>
             <li>Gender: <?= $gender; ?></li>
             <li>Phone Number: <?= $phone; ?></li>
-            <li>Date Of Birth: <?= $dob; ?></li>
+            <li>Date Of Birth: <?= date("d M Y", strtotime($dob)) ; ?></li>
             <li>Address: <?= $address; ?></li>
           </ul>
         </div>

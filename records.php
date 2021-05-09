@@ -36,12 +36,11 @@
                   <option value="Female">Female</option>
                 </select>
               </div>
-
               <div class="score-search">
-                <input type="text" placeholder="Enter Jamb Score" name="jamb_score">
+                <input type="text" placeholder="Enter Jamb Score" name="jamb_score" id="jamb_score">
             </div>
            <div class="search-btn">
-             <input type="submit" value="Search" name="search">
+             <input type="submit" name="search" id="search" value="Search">
            </div>
          </form>
          <div class="students-records">

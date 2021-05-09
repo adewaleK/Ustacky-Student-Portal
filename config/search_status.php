@@ -4,12 +4,10 @@ include 'connection.php';
 $output="";
 $x=1;
 
-if(isset($_POST['search'])){
-    $name = $_POST['search'];
+if(isset($_POST['status'])){
+    $status = $_POST['status'];
 
-    $query ="SELECT * FROM students WHERE firstname 
-    LIKE '%$name%' OR lastname LIKE '%$name%' 
-    OR middlename LIKE '%$name%'";
+    $query ="SELECT * FROM students WHERE admin_status = '$status'";
     
 }else{
     $query ="SELECT * FROM students";
@@ -40,8 +38,9 @@ if($result->num_rows>0){
         ";
         $GLOBALS['x']++;
     }
-    echo $output;
-
-}else{
-    echo "<h3 style='text-align:center'>No records found for this name!</h3>";
+    echo $output; 
 }
+
+
+
+//echo $status;

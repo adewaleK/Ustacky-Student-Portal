@@ -3,14 +3,11 @@ include 'connection.php';
 
 $output="";
 $x=1;
+if(isset($_POST['score']) && isset($_POST['gender'])){
+    $score = $_POST['score'];
+    $gender = $_POST['gender'];
 
-if(isset($_POST['search'])){
-    $name = $_POST['search'];
-
-    $query ="SELECT * FROM students WHERE firstname 
-    LIKE '%$name%' OR lastname LIKE '%$name%' 
-    OR middlename LIKE '%$name%'";
-    
+    $query ="SELECT * FROM students WHERE gender='$gender' AND jamb_score='$score'";
 }else{
     $query ="SELECT * FROM students";
 }
