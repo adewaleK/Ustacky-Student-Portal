@@ -11,8 +11,8 @@
     <title>Document | Home</title>
 </head>
 <body>
-    <div class="container">
-    <?php include 'includes/navbar.php'; ?>
+   <div class="container">
+   <?php include 'includes/navbar.php'; ?>
         <div class="content">
            <div class="about">
               <h1>Student Main Portal</h1>
@@ -23,9 +23,9 @@
               <img src="assets/images/home_img.jpg" alt="image">
            </div>
         </div>
-    <?php include 'includes/footer.php'; ?>   
-    </div>
-  <script src="assets/js/jquery.main.js"></script>
-  <script src="assets/js/main.js"></script> 
+   <?php include 'includes/footer.php'; ?>   
+   </div>
+   <script src="assets/js/jquery.main.js"></script>
+   <script src="assets/js/main.js"></script> 
 </body>
 </html>

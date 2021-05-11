@@ -105,6 +105,12 @@ a:hover{
     font-size: 18px;
     font-weight: bold;
     border-radius: 8px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.about button:hover{
+    letter-spacing: 4px;   
 }
 
 .footer p{

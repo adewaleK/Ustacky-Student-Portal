@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     //Ajax to Load LGAs FROM STATES
     $("#state").change(function(){
       var state_id = $(this).val();
@@ -90,10 +89,4 @@ $(document).ready(function(){
         }
       }) 
     })
-
-
-    
-
-
 })
-
