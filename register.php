@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Document | Portal</title>
+    <title>Student Portal | Portal</title>
 </head>
 <body>
     <div class="container1">
@@ -59,14 +59,12 @@
                     <label for="dob">Date Of Birth</label>
                     <input type="date" class="first" name="dob" id="dob">
                 </div>
-                <div class="radio-group">
-                   
+                <div class="radio-group">   
                      <p>Gender</p>
                        <label for="male">Male</label>
                        <input type="radio" id="gender" name="gender" value="male">
                        <label for="female">Female</label>
                        <input type="radio" id="gender" name="gender" value="female">
-                   
                 </div>
             </div>
             <div class="other-input">

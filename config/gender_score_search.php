@@ -40,5 +40,5 @@ if($result->num_rows>0){
     echo $output;
 
 }else{
-    echo "<h3 style='text-align:center'>No records found for this name!</h3>";
+    echo "<h3 style='text-align:center'>No records found for this combination of gender and score!</h3>";
 }

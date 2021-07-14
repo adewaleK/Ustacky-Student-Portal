@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Document | Profile</title>
+    <title>Student Portal | Profile</title>
 </head>
 <body>
   <div class="container">
@@ -39,7 +39,6 @@
                 $score = $row['jamb_score'];
                 $status = $row['admin_status'];
               }
-
           ?>
           <img src="<?= 'config/'.$image_path; ?>" alt="image" >
           <h1><?= $fname; ?> <?= $lname; ?></h1>
